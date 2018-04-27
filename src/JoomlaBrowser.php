@@ -1102,5 +1102,6 @@ class JoomlaBrowser extends WebDriver
 		$this->wait(1);
 		$this->waitForElement(['link' => 'Never'], TIMEOUT);
 		$this->click(['link' => 'Never']);
+		$this->wait(1);
 	}
 }
