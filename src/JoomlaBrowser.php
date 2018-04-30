@@ -474,7 +474,8 @@ class JoomlaBrowser extends WebDriver
 		$this->click(array('link' => 'Upload Package File'));
 
 		$this->debug('I make sure legacy uploader is visible');
-		$this->executeJS('document.getElementById("legacy-uploader").style.display="block";');
+		$this->executeJS('document.getElementById("legacy-uploader").style.display="block";')
+		$this->waitForText('Extension package file');
 
 		$this->debug('I enter the file input');
 		$this->attachFile(array('id' => 'install_package'), $file);
