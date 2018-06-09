@@ -401,7 +401,7 @@ class JoomlaBrowser extends WebDriver
 	 */
 	public function setErrorReportingToDevelopment()
 	{
-		$this->debug ('I open Joomla Global Configuration Page');
+		$this->debug('I open Joomla Global Configuration Page');
 		$this->amOnPage('/administrator/index.php?option=com_config');
 		$this->debug('I wait for Global Configuration title');
 		$this->waitForText('Global Configuration', TIMEOUT, array('css' => '.page-title'));
