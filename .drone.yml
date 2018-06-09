@@ -4,8 +4,9 @@ pipeline:
     depth: 1
 
   phpcs:
-    image: joomlaprojects/docker-phpcs
+    image: php/php:7.2
     commands:
       - echo $(date)
-      - /root/.composer/vendor/bin/phpcs --report=full --extensions=php -p --standard=build/phpcs/Joomla .
+      - composer install --prefer-dist --no-progress --no-interaction
+      - vendor/bin/robo check:codestyle
       - echo $(date)
