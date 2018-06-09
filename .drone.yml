@@ -4,7 +4,7 @@ pipeline:
     depth: 1
 
   phpcs:
-    image: php:7.2
+    image: composer:latest
     commands:
       - echo $(date)
       - composer install --prefer-dist --no-progress --no-interaction
